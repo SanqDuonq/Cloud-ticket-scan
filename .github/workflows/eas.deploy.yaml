@@ -32,7 +32,7 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: npm ci
+        run: yarn
 
       # Configure EAS Build
       - name: Configure EAS Build
