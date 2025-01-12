@@ -34,7 +34,7 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: npm ci
+        run: yarn
 
       # Publish to EAS Update
       - name: Publish to EAS Update
