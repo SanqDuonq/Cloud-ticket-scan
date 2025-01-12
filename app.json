@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Cloud-Ticket-Scan",
-    "slug": "Cloud-Ticket-Scan",
+    "slug": "cloud-ticket-scan",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sanqduonq.cloudticketscan"
     },
     "web": {
       "bundler": "metro",
@@ -42,8 +43,9 @@
         "origin": false
       },
       "eas": {
-        "projectId": "28702458-1dd6-4814-9b7a-d82af41c1231"
+        "projectId": "adee8d24-0a40-46a5-bdd2-a3e36335e070"
       }
-    }
+    },
+    "owner": "sanqduonq"
   }
 }
