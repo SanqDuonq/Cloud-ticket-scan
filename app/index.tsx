@@ -1,8 +1,9 @@
-import { Link } from "expo-router";
-import { Image, Text, Touchable, TouchableOpacity, View } from "react-native";
+import { useRouter } from "expo-router";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import WelcomeHome from '../assets/images/welcome.jpg';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 export default function Index() {
+    const router = useRouter();
     return (
         <View className="relative w-full h-screen">
             <Image
@@ -14,7 +15,10 @@ export default function Index() {
                 <Text className="text-center text-xl  text-gray-50">Discovery more experience from scan app</Text>
             </View>
             <View className="absolute bottom-10 w-full">
-                <TouchableOpacity className="mx-auto flex-row items-center bg-black px-6 rounded-[8px] h-[45px]">
+                <TouchableOpacity 
+                    onPress={() => router.push('/auth/sign-in')}
+                    className="mx-auto flex-row items-center bg-black px-6 rounded-[8px] h-[45px]"
+                >
                     <Text className="text-white">Get started</Text>
                     <FontAwesome name="chevron-right" size={10} color="#FFF" className="ml-2" />
                 </TouchableOpacity>
