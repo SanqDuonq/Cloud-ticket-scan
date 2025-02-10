@@ -23,7 +23,6 @@ const SignIn = () => {
         })
         setIsLoading(false);
     }
-
     return (
         <View className='flex-1 bg-white px-6 pt-10'>
             <View className='items-center gap-y-2'>
@@ -37,7 +36,6 @@ const SignIn = () => {
                 <Text className='text-gray-600 text-3xl font-bold mt-2'>Welcome to ExpGo</Text>
                 <Text className='text-gray-400 text-sm text-center mt-1 font-semibold'>Sign up or login below to manage your project, task, and productivity</Text>
             </View>
-            
             <View className='flex-row mt-6 border-b border-gray-300'>
                 <TouchableOpacity className='flex-1 pb-2 border-b-2 border-emerald-700'>
                     <Text className='text-center text-emerald-700 font-bold'>Login</Text>
