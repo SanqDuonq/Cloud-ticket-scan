@@ -7,8 +7,11 @@ export default function RootLayout() {
                 name="index"
             />
             <Stack.Screen 
-                name="auth/sign-in.tsx"
+                name="sign-in"
             />
-        </Stack>
+            <Stack.Screen 
+                name="/app/auth/sign-up.tsx"
+            />
+        </Stack> 
     )
 }

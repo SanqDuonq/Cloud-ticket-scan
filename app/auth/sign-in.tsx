@@ -5,9 +5,11 @@ import InputComponent from '@/components/input';
 import ButtonComponent from '@/components/button';
 import { signInAPI } from '@/api/auth.api';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import { useRouter } from 'expo-router';
 
 const SignIn = () => {
-    const [signUp, setSignUp] = useState({
+    const router = useRouter();
+    const [signIn, setSignIn] = useState({
         email: '',
         password: ''
     })
@@ -17,8 +19,8 @@ const SignIn = () => {
     const handleSignIn = async () => {
         setIsLoading(true);
         await signInAPI({
-            email: signUp.email,
-            password: signUp.password,
+            email: signIn.email,
+            password: signIn.password,
             isLoading: isLoading
         })
         setIsLoading(false);
@@ -40,7 +42,10 @@ const SignIn = () => {
                 <TouchableOpacity className='flex-1 pb-2 border-b-2 border-emerald-700'>
                     <Text className='text-center text-emerald-700 font-bold'>Login</Text>
                 </TouchableOpacity>
-                <TouchableOpacity className='flex-1 pb-2'>
+                <TouchableOpacity
+                    className='flex-1 pb-2' 
+                    onPress={() => router.push('/auth/sign-up')}
+                >
                     <Text className='text-center text-emerald-700 font-bold'>Sign Up</Text>
                 </TouchableOpacity>
             </View>
@@ -58,14 +63,14 @@ const SignIn = () => {
                 <InputComponent
                     name='Email'
                     placeholder='Email'
-                    value={signUp.email}
-                    onChangeText={(text) => setSignUp({ ...signUp, email: text })}
+                    value={signIn.email}
+                    onChangeText={(text) => setSignIn({ ...signIn, email: text })}
                 />
                 <InputComponent
                     name='Password'
                     placeholder='Password'
-                    value={signUp.password}
-                    onChangeText={(text) => setSignUp({ ...signUp, password: text })}
+                    value={signIn.password}
+                    onChangeText={(text) => setSignIn({ ...signIn, password: text })}
                     secureTextEntry
                 />
                 <TouchableOpacity>
